@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- PAGE SETTINGS -->
+
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Creative Works | My Palettes</title>
+
+    <!-- Shared CSS for the entire portfolio -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS specifically for the Creative Works section -->
+    <link rel="stylesheet" href="creative.css">
+
+    <!-- JavaScript for Creative Works interactions -->
+    <script src="creative.js" defer></script>
+
+</head>
+
+
+<body class="creative-site">
+    <!--MAIN  NAVIGATION -->
+
+    <nav class="cw-topnav" aria-label="Main navigation">
+
+        <!-- Return to portfolio homepage -->
+        <a href="index.html" class="palette-back-link">← Back to the Palettes</a>
+        <!-- Navigation to other portfolio pages -->
+        <div class="cw-toplinks">
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="photography.html">
+                Creative Works
+            </a>
+
+            <a href="now.html">
+                Now
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!--MAIN CREATIVE WORKS HOMEPAGE -->
+    <main>
+
+
+        <!-- SECTION 1: INTRODUCTION-->
+
+        <section class="cw-homehero">
+
+            <svg
+                class="cw-wash"
+                viewBox="0 0 800 380"
+                aria-hidden="true"
+            >
+
+                <defs>
+
+                    <!-- GOLD WATERCOLOR GRADIENT -->
+                    <radialGradient id="goldwash">
+
+                        <stop
+                            stop-color="#DBB16A"
+                            stop-opacity=".52"
+                        />
+
+                        <stop
+                            offset="1"
+                            stop-color="#DBB16A"
+                            stop-opacity="0"
+                        />
+
+                    </radialGradient>
+
+
+                    <!-- ORANGE WATERCOLOR GRADIENT -->
+                    <radialGradient id="orangewash">
+
+                        <stop
+                            stop-color="#E6A47A"
+                            stop-opacity=".35"
+                        />
+
+                        <stop
+                            offset="1"
+                            stop-color="#E6A47A"
+                            stop-opacity="0"
+                        />
+
+                    </radialGradient>
+
+                </defs>
+
+
+                <!-- Gold watercolor shape -->
+                <path
+                    d="
+                        M90 130
+                        C175 10 430 40 590 135
+                        S740 330 470 335
+                        S10 285 90 130Z
+                    "
+                    fill="url(#goldwash)"
+                />
+
+
+                <!-- Orange watercolor shape -->
+                <path
+                    d="
+                        M390 65
+                        C580 -5 800 90 760 230
+                        S540 370 390 240Z
+                    "
+                    fill="url(#orangewash)"
+                />
+
+            </svg>
+
+
+            <!-- Small chapter label -->
+            <p class="cw-kicker">
+                AMBER — CREATIVE WORKS
+            </p>
+
+
+            <!-- Main heading -->
+            <h1>
+                Beyond the data,<br>
+                there’s another palette.
+            </h1>
+
+
+            <!-- Creative Works introduction -->
+            <p>
+                Some stories are told through numbers.
+                Others take shape in photographs, page layouts,
+                and the colors I find myself returning to.
+                This is a collection of the things I make
+                and the moments I notice.
+            </p>
+
+        </section>
+
+
+
+        <!-- SECTION 2: CREATIVE WORKS CHAPTERS-->
+        <section
+            class="cw-doorways"
+            aria-label="Explore creative work"
+        >
+
+
+            <!--CARD 1: DESIGN & ART-->
+
+            <a
+                class="cw-doorway"
+                href="creative-design.html"
+            >
+
+                <span>
+                    01 / LAYOUTS & ART
+                </span>
+
+                <div>
+
+                    <h2>
+                        Design & Art ↗
+                    </h2>
+
+                    <p>
+                        Editorial layouts, magazine spreads,
+                        and creative experiments.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!--CARD 2: PHOTOGRAPHY -->
+
+            <a
+                class="cw-doorway"
+                href="creative-photography.html"
+            >
+
+                <span>
+                    02 / THROUGH MY LENS
+                </span>
+
+                <div>
+
+                    <h2>
+                        Photography ↗
+                    </h2>
+
+                    <p>
+                        Scenes, passing moments,
+                        and the many lives of the city.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- CARD 3: COLOR & PSYCHOLOGY -->
+
+            <a
+                class="cw-doorway"
+                href="creative-colors.html"
+            >
+
+                <span>
+                    03 / BEHIND THE WEBSITE
+                </span>
+
+                <div>
+
+                    <h2>
+                        Color & Psychology ↗
+                    </h2>
+
+                    <p>
+                        Why each chapter of My Palettes
+                        has its own shade.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+
+    <!--FOOTER-->
+    <footer class="palette-profile-footer now-footer">
+    <div><h2>KATE GAO</h2><p>Data Science × Psychology</p><p>Analytical × Creative</p><p>Curious about human behavior, research, and the stories behind data.</p></div>
+    <div><h2>CONNECT</h2><p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a> <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a> <a href="mailto:your-email@example.com">Email ↗</a></p></div>
+  </footer>
+
+</body>
+
+</html>

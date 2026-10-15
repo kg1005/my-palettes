@@ -1,0 +1,811 @@
+/* CREATIVE WORKS — Shared styles for all four creative pages.
+   The prefix cw- keeps these styles separate from your existing Profile/Projects CSS. */
+:root{--cw-paper:#F8F5EE;
+   --cw-ink:#302F2B;
+   --cw-muted:#756e67;
+   --cw-line:#ded5c7;
+   --cw-orange:#c77f49;
+   --cw-gold:#d5a24d;
+   --cw-soft:#efd8b0}
+*{box-sizing:border-box} 
+body.creative-site{
+   margin:0;
+   min-height:100vh;
+   display:flex;
+   flex-direction:column;
+   background:var(--cw-paper);
+   color:var(--cw-ink);
+   font-family:Georgia,'Times New Roman',serif
+   }
+   
+   body.creative-site a{color:inherit}
+   body.creative-site main{flex:1} 
+   .cw-topnav{
+      max-width:1180px;
+      width:100%;
+      margin:0 auto;
+      padding:22px 6%;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:center;
+      font:13px Arial,sans-serif;
+      letter-spacing:.08em
+   }.cw-topnav a{text-decoration:none}
+   .cw-topnav a:hover{color:var(--cw-orange)}
+   .cw-toplinks{display:flex;gap:20px;flex-wrap:wrap}
+   .cw-homehero{max-width:1120px;
+      margin:25px auto 45px;
+      padding:90px 7% 60px;
+      position:relative;
+      isolation:isolate
+   }.cw-kicker{font:700 12px Arial,sans-serif;
+      letter-spacing:.2em;
+      color:#ad7843;
+      text-transform:uppercase
+   }.cw-homehero h1,.cw-heading h1{font-weight:normal;
+      letter-spacing:-.04em;
+      font-size:clamp(45px,6vw,88px);
+      line-height:1.08;margin:20px 0
+   }.cw-homehero p,.cw-heading p{
+      font-size:clamp(17px,2vw,21px);
+      line-height:1.7;
+      max-width:680px;
+      color:var(--cw-muted)
+   }.cw-wash{
+      position:absolute;
+      z-index:-1;
+      pointer-events:none;
+      width:min(820px,90%);
+      height:auto;top:0;
+      right:-2%;
+      opacity:.8
+   }.cw-doorways{
+      max-width:1120px;
+      margin:0 auto 110px;
+      padding:0 7%;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px
+   }.cw-doorway{
+      position:relative;
+      min-height:260px;
+      padding:30px;
+      border:1px solid #ded1be;
+      border-radius:19px;
+      text-decoration:none;
+      background:rgba(255,255,255,.36);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      transition:transform .25s, border-color .25s,box-shadow .25s
+   }.cw-doorway:hover,.cw-doorway:focus-visible{
+      transform:translateY(-5px);
+      border-color:#c78750;
+      box-shadow:0 12px 25px #b69d801f
+   }.cw-doorway h2{
+      font-weight:normal;
+      font-size:32px;
+      margin:0
+   }.cw-doorway p{
+      line-height:1.6;
+      color:var(--cw-muted)
+   }.cw-doorway span{
+      color:#b17441;
+      font:12px Arial,sans-serif;
+      letter-spacing:.1em
+   }.cw-page{
+      max-width:1250px;
+      width:100%;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:190px minmax(0,1fr);
+      gap:52px;
+      padding:35px 6% 100px
+   }
+      /* Let paragraphs use more of the content area */
+   body.creative-site .cw-main .cw-section {
+      width: 100%;
+      max-width: none;
+   }
+
+   body.creative-site .cw-main .cw-section > p {
+      max-width: 900px;
+   }
+   .cw-tabs{
+      position:sticky;
+      top:20px;
+      align-self:start;
+      padding-top:24px
+   }.cw-tabs-title{
+      font:11px Arial,sans-serif;
+      letter-spacing:.16em;
+      color:#85766a;
+      margin:0 0 18px 14px
+   }.cw-tab{
+      display:block;
+      padding:18px 16px 18px 20px;
+      margin:0 0 8px;
+      border-radius:3px 13px 13px 3px;
+      border-left:5px solid transparent;
+      text-decoration:none;
+      font:14px Arial,sans-serif;
+      transition:transform .2s,filter .2s
+   }.cw-tab:hover{
+      transform:translateX(5px);
+      filter:saturate(1.12)
+   }.cw-tab:nth-of-type(1){
+      background:#f5e8c9;
+      border-color:#e7c67d
+   }.cw-tab:nth-of-type(2){
+      background:#f0d9b4;
+      border-color:#dbab63
+   }.cw-tab:nth-of-type(3){
+      background:#f1cba7;
+      border-color:#d9955d
+   }.cw-tab:nth-of-type(4){
+      background:#efd5c5;
+      border-color:#c77f49
+   }.cw-tab[aria-current="page"]{
+      font-weight:bold;
+      box-shadow:2px 3px 9px #9b714a2a
+   }.cw-heading{
+      position:relative;
+      isolation:isolate;
+      padding:40px 0 70px
+   }.cw-heading h1{
+      font-size:clamp(42px,5vw,70px)
+   }.cw-heading .cw-wash{
+      width:70%;right:0;top:-30px
+   }.cw-section{
+      margin:10px 0 70px
+   }.cw-section h2{
+      font-weight:normal;
+      font-size:clamp(28px,3vw,40px)
+   }.cw-section p,.cw-section li{
+      font-size:17px;
+      line-height:1.8;
+      color:#5c554f
+   }.cw-gallery{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:22px
+   }.cw-photo{
+      position:relative;
+      min-height:270px;
+      aspect-ratio:4/3;
+      background:linear-gradient(145deg,#ece3d7,#e0d6c9);
+      border:1px solid #d9cec1;
+      border-radius:12px;
+      overflow:hidden
+   }.cw-photo img{
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover
+   }.cw-photo .cw-placeholder{
+      height:100%;
+      display:grid;
+      place-content:center;
+      text-align:center;
+      padding:25px;
+      color:#8b7a6a;
+      font:14px Arial,sans-serif
+   }.cw-photo .cw-photo-caption{
+      position:absolute;
+      inset:auto 0 0;
+      background:linear-gradient(transparent,rgba(30,26,23,.85));
+      color:white;
+      padding:65px 22px 20px;
+      transform:translateY(100%);
+      transition:transform .28s
+   }.cw-photo:hover .cw-photo-caption,
+   .cw-photo:focus-within .cw-photo-caption{
+      transform:translateY(0)
+   }.cw-photo-caption strong{
+      display:block;
+      font:17px Georgia,serif;
+      margin-bottom:8px
+   }.cw-photo-caption small{
+      font:12px Arial,sans-serif;
+      line-height:1.8
+   }.cw-photo:focus-within{outline:2px solid #c77f49}
+   .cw-issues{display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:24px
+   }.cw-issue{
+      border:1px solid var(--cw-line);
+      border-radius:14px;
+      padding:22px;
+      background:#fff9f2aa
+   }.cw-issue-art{
+      aspect-ratio:1.45;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      background:linear-gradient(135deg,#d3dfdc,#f0e1d0);
+      color:#47636c;
+      font-size:35px;
+      letter-spacing:.04em;padding:20px
+   }.cw-issue-art.pending{
+      background:repeating-linear-gradient(45deg,#f3e5d3,#f3e5d3 12px,#f8eee0 12px,#f8eee0 24px);
+      color:#9b7a58
+   }.cw-issue h3{
+      font-size:24px;
+      font-weight:normal;
+      margin-bottom:6px
+   }.cw-issue p{font-size:15px
+   }.cw-issue a{
+      display:inline-block;
+      margin-top:8px;
+      color:#a76c3b;
+      text-underline-offset:5px
+   }.cw-palette-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:24px
+   }.cw-palette{
+      border-bottom:1px solid var(--cw-line);
+      padding-bottom:20px
+   }.cw-swatches{
+      display:flex;
+      height:80px;
+      border-radius:10px;
+      overflow:hidden
+   }.cw-swatches span{flex:1}
+   .cw-palette h3{
+      font-size:23px;
+      font-weight:normal;
+      margin:18px 0 8px
+   }.cw-palette ul{padding-left:21px}
+   .cw-note{border-left:3px solid #d9a467;
+      padding:4px 22px;
+      background:#f7e9d5a8
+   }.cw-footer{
+      border-top:1px solid var(--cw-line);
+      max-width:1100px;
+      width:88%;
+      margin:25px auto 0;
+      padding:35px 0 45px;
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      color:#76665a
+   }.cw-footer strong{
+      font-size:22px;
+      font-weight:normal
+   }.cw-footer a{color:#a56b45}
+   .cw-muted{color:var(--cw-muted);font-size:14px}
+   .cw-source{font-size:14px!important}
+   .cw-cta{color:#a56b45;text-underline-offset:5px}
+   
+.featured-design {
+  margin: 40px 0 70px;
+}
+
+.design-spread {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 28px 0;
+  border-radius: 4px;
+}
+
+.design-issue-link {
+  color: #B77D35;
+  text-decoration: none;
+}
+
+.design-issue-link:hover {
+  text-decoration: underline;
+}
+
+/*CREATIVE WORKS — LAYOUT REFINEMENTS*/
+
+/* Prevent navigation from creating vertical gaps */
+body.creative-site .cw-topnav {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Compact the Creative Works introduction */
+body.creative-site .cw-homehero {
+    max-width: 1120px;
+    margin: 15px auto 30px;
+    padding: 55px 7% 35px;
+}
+
+/* Keep headings and descriptions close together */
+body.creative-site .cw-homehero h1 {
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.12;
+    margin: 14px 0 20px;
+}
+
+body.creative-site .cw-homehero > p:not(.cw-kicker) {
+    margin: 0;
+    max-width: 720px;
+    line-height: 1.65;
+}
+
+/* Make the three Creative Works cards shorter */
+body.creative-site .cw-doorways {
+    margin: 0 auto 65px;
+    padding: 0 7%;
+    gap: 20px;
+    align-items: stretch;
+}
+
+body.creative-site .cw-doorway {
+    min-height: 210px;
+    padding: 25px;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+/* Align the text consistently inside each card */
+body.creative-site .cw-doorway > div {
+    margin-top: 0;
+}
+
+body.creative-site .cw-doorway h2 {
+    font-size: clamp(25px, 2.5vw, 31px);
+    line-height: 1.2;
+    margin: 0 0 12px;
+}
+
+body.creative-site .cw-doorway p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/*ALL CREATIVE SUBPAGE HEADERS */
+
+body.creative-site .cw-page {
+    padding-top: 20px;
+    padding-bottom: 65px;
+    gap: 35px;
+}
+
+body.creative-site .cw-heading {
+    padding: 35px 0 35px;
+    margin-bottom: 20px;
+}
+
+body.creative-site .cw-heading h1 {
+    font-size: clamp(40px, 5vw, 64px);
+    margin: 14px 0;
+}
+
+body.creative-site .cw-section {
+    margin: 0 0 45px;
+}
+
+/* Watercolor behind all headers using cw-heading */
+body.creative-site .cw-heading .cw-wash {
+    width: min(650px, 90%);
+    top: -35px;
+    right: 0;
+    opacity: 0.85;
+}
+
+/*CREATIVE WORKS HOMEPAGE — SPACING & ALIGNMENT */
+
+/* Center the heading and description */
+body.creative-site .cw-homehero {
+    text-align: center;
+    margin: 10px auto 15px;
+    padding: 35px 7% 20px;
+}
+
+/* Center the main heading */
+body.creative-site .cw-homehero h1 {
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.12;
+    margin: 12px auto 18px;
+}
+
+/* Center the description directly below the heading */
+body.creative-site .cw-homehero > p:not(.cw-kicker) {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+/* Bring the three option cards closer to the description */
+body.creative-site .cw-doorways {
+    margin-top: 0;
+    margin-bottom: 55px;
+    padding-top: 0;
+}
+
+/* Keep the cards compact and aligned */
+body.creative-site .cw-doorway {
+    min-height: 190px;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+/*CREATIVE WORKS HOMEPAGE — REMOVE HUGE GAP */
+
+/* Stop the hero section from taking up the whole screen */
+body.creative-site .cw-homehero {
+    min-height: 0;
+    height: auto;
+
+    margin: 10px auto 20px;
+    padding: 40px 7% 20px;
+
+    text-align: center;
+}
+
+/* Keep the heading and paragraph centered */
+body.creative-site .cw-homehero h1 {
+    margin: 12px auto 18px;
+}
+
+body.creative-site .cw-homehero > p:not(.cw-kicker) {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Place the three cards directly after the introduction */
+body.creative-site .cw-doorways {
+    min-height: 0;
+    height: auto;
+
+    margin: 0 auto 55px;
+    padding: 0 7%;
+
+    align-items: stretch;
+}
+
+/* Keep each card compact */
+body.creative-site .cw-doorway {
+    min-height: 190px;
+    height: auto;
+}
+
+
+/*DESIGN & ART PAGE — REFINED LAYOUT */
+
+/* Keep the shared navigation at the top */
+body.creative-site .cw-topnav {
+    margin: 0 auto;
+}
+
+/* Reduce excess spacing in the main layout */
+body.creative-site .cw-page {
+    padding-top: 20px;
+    padding-bottom: 65px;
+    gap: 35px;
+}
+
+/*PAGE HEADING */
+
+/* Make the header more compact */
+body.creative-site .cw-heading {
+    position: relative;
+    isolation: isolate;
+    padding: 35px 0 25px;
+    margin-bottom: 15px;
+}
+
+/* Match heading size across Creative Works */
+body.creative-site .cw-heading h1 {
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.12;
+    margin: 14px 0 18px;
+}
+
+/* Keep the description aligned with the title */
+body.creative-site .cw-heading > p:not(.cw-kicker) {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Amber watercolor behind the heading */
+body.creative-site .cw-heading .cw-wash {
+    position: absolute;
+    width: min(650px, 90%);
+    top: -35px;
+    right: 0;
+    opacity: 0.85;
+    z-index: -1;
+    pointer-events: none;
+}
+/* Align Design & Art heading and description */
+body.creative-site .cw-heading {
+    text-align: center;
+}
+
+/*PHOTOGRAPHY — CENTERED INTRODUCTION */
+
+/* Center the title and introduction together */
+body.creative-site .cw-heading {
+    text-align: center;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+}
+
+/* Center the introduction directly below the title */
+body.creative-site .cw-heading > p:not(.cw-kicker) {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Reduce space before the gallery */
+body.creative-site .cw-heading + .cw-section {
+    margin-top: 0;
+}
+
+
+/*    web deisgn — SPACING FIXES */
+
+/* Keep the page content aligned and full-width */
+body.creative-site .cw-main {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Reduce gaps between content sections */
+body.creative-site .cw-section {
+    margin: 0 0 32px;
+    padding: 0;
+    min-height: 0;
+    height: auto;
+}
+
+/* Remove extra space after section headings */
+body.creative-site .cw-section h2 {
+    margin: 0 0 18px;
+    line-height: 1.25;
+}
+
+/* Make paragraphs use the available content width */
+body.creative-site .cw-section > p {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 18px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* Reduce space around the color psychology note */
+body.creative-site .cw-note {
+    margin: 18px 0 0;
+    padding: 12px 22px;
+}
+
+body.creative-site .cw-note p {
+    margin: 0 0 10px;
+}
+
+body.creative-site .cw-note p:last-child {
+    margin-bottom: 0;
+}
+
+/* Keep the palette grid close to its heading */
+body.creative-site .cw-palette-grid {
+    margin-top: 18px;
+}
+/*web design — BALANCED SPACING */
+
+/* Add space between sections */
+body.creative-site .cw-section {
+    margin-bottom: 55px;
+}
+
+/* Add space between headings and paragraphs */
+body.creative-site .cw-section h2 {
+    margin-bottom: 28px;
+}
+
+/* Comfortable spacing between paragraphs */
+body.creative-site .cw-section > p {
+    margin-bottom: 22px;
+}
+
+/* Add a little space after the page introduction */
+body.creative-site .cw-heading {
+    margin-bottom: 30px;
+}
+
+/*SELECTED WORKS SECTION */
+
+.design-section-title {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0 0 25px;
+}
+
+/* Two-column editorial portfolio */
+.design-project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+/* Individual project */
+.design-project {
+    min-width: 0;
+}
+
+/*PROJECT IMAGE PREVIEW */
+
+/* Clickable image area */
+.design-project-image-link {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.45;
+    background: #eee8df;
+    border: 1px solid #ded5c7;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Keep the entire spread visible */
+.design-project-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Subtle hover interaction */
+.design-project-image-link:hover .design-project-image {
+    transform: scale(1.025);
+}
+
+/* SPRING 2026 PLACEHOLDER */
+
+.design-project-placeholder {
+    width: 100%;
+    aspect-ratio: 1.45;
+    background: linear-gradient(
+        135deg,
+        #f3e5d3,
+        #f8eee0
+    );
+    border: 1px solid #ded5c7;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    text-align: center;
+    color: #9b7a58;
+}
+
+.design-project-placeholder span {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+}
+
+.design-project-placeholder p {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    margin: 0;
+    color: #9b7a58;
+}
+
+/*PROJECT TEXT */
+
+.design-project-category {
+    margin: 20px 0 10px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: #b17441;
+}
+
+.design-project h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0 0 8px;
+}
+
+.design-project-meta {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #756e67;
+    margin: 0 0 15px;
+}
+
+.design-project-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #5c554f;
+    margin: 0 0 15px;
+}
+
+/* Publication link */
+.design-project .design-issue-link {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #a56b45;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 4px;
+}
+
+.design-project .design-issue-link:hover {
+    color: #82502c;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 650px) {
+
+    /* Stack projects on smaller screens */
+    .design-project-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .design-section-title {
+        font-size: 27px;
+    }
+
+    body.creative-site .cw-heading {
+        padding-top: 30px;
+    }
+
+    body.creative-site .cw-heading h1 {
+        font-size: 43px;
+    }
+
+    body.creative-site .cw-heading > p:not(.cw-kicker) {
+        font-size: 16px;
+    }
+
+}
+
+@media(max-width:850px){
+   .cw-page{grid-template-columns:1fr;gap:10px}
+   .cw-tabs{position:static;display:flex;flex-wrap:wrap;gap:8px;padding:0}
+   .cw-tabs-title{width:100%;margin:0}
+   .cw-tab{margin:0;flex:1;min-width:120px;border-left-width:3px;padding:12px}
+   .cw-doorways{grid-template-columns:1fr}
+   .cw-doorway{min-height:180px}
+   .cw-gallery,.cw-issues,.cw-palette-grid{grid-template-columns:1fr}
+   .cw-photo .cw-photo-caption{transform:none}.cw-topnav{flex-wrap:wrap}}
+   body.creative-site .cw-homehero {
+        padding: 45px 7% 30px;
+    }
+
+    body.creative-site .cw-doorways {
+        grid-template-columns: 1fr;
+    }
+
+    body.creative-site .cw-doorway {
+        min-height: 160px;
+    }
+
+    body.creative-site .cw-page {
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 30px;
+    }
+@media(prefers-reduced-motion:reduce){.cw-doorway,.cw-tab,.cw-photo-caption{transition:none}}

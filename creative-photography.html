@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- PAGE SETTINGS-->
+
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Life through my lens. | My Palettes</title>
+
+    <!-- Shared styling across the portfolio -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Styling specifically for Creative Works -->
+    <link rel="stylesheet" href="creative.css">
+
+    <!-- JavaScript for the photography gallery -->
+    <script src="creative.js" defer></script>
+</head>
+
+
+<body class="creative-site">
+
+    <!-- MAIN NAVIGATION -->
+
+    <nav class="cw-topnav" aria-label="Main navigation">
+
+        <!-- Return to portfolio homepage -->
+        <a href="index.html">
+            ← MY PALETTES / HOME
+        </a>
+
+        <!-- Links to other portfolio sections -->
+        <div class="cw-toplinks">
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="photography.html">
+                Creative Works
+            </a>
+
+            <a href="now.html">
+                Now
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT-->
+
+    <main>
+
+        <!--
+            cw-page creates the overall layout.
+
+            It contains:
+            1. Left-side chapter navigation
+            2. Main photography content
+        -->
+        <div class="cw-page">
+
+
+            <!-- LEFT-SIDE CREATIVE CHAPTER TABS -->
+
+            <aside
+                class="cw-tabs"
+                aria-label="Creative chapters"
+            >
+
+                <p class="cw-tabs-title">
+                    CREATIVE CHAPTERS
+                </p>
+
+                <!-- Creative Works homepage -->
+                <a
+                    class="cw-tab"
+                    href="photography.html"
+                >
+                    Overview
+                </a>
+
+                <!-- Editorial design and artwork -->
+                <a
+                    class="cw-tab"
+                    href="creative-design.html"
+                >
+                    Design & Art
+                </a>
+
+                <!-- Current page -->
+                <a
+                    class="cw-tab"
+                    href="creative-photography.html"
+                    aria-current="page"
+                >
+                    Photography
+                </a>
+
+                <!-- Website color psychology and design -->
+                <a
+                    class="cw-tab"
+                    href="creative-colors.html"
+                >
+                    Behind the Colors
+                </a>
+
+            </aside>
+
+
+            <!--PHOTOGRAPHY PAGE CONTENT-->
+
+            <div class="cw-main">
+
+
+                <!--PAGE TITLE + WATERCOLOR BACKGROUND -->
+
+                <header class="cw-heading">
+
+                    <!--
+                        SVG creates the watercolor background.
+
+                        It uses two radial gradients:
+                        1. Warm gold
+                        2. Soft orange
+
+                        The gradients fade toward their edges,
+                        producing a watercolor-like effect.
+                    -->
+                    <svg
+                        class="cw-wash"
+                        viewBox="0 0 800 380"
+                        aria-hidden="true"
+                    >
+
+                        <defs>
+
+                            <!-- Gold watercolor gradient -->
+                            <radialGradient id="goldwash">
+
+                                <stop
+                                    stop-color="#DBB16A"
+                                    stop-opacity=".52"
+                                />
+
+                                <stop
+                                    offset="1"
+                                    stop-color="#DBB16A"
+                                    stop-opacity="0"
+                                />
+
+                            </radialGradient>
+
+
+                            <!-- Orange watercolor gradient -->
+                            <radialGradient id="orangewash">
+
+                                <stop
+                                    stop-color="#E6A47A"
+                                    stop-opacity=".35"
+                                />
+
+                                <stop
+                                    offset="1"
+                                    stop-color="#E6A47A"
+                                    stop-opacity="0"
+                                />
+
+                            </radialGradient>
+
+                        </defs>
+
+
+                        <!-- Gold watercolor shape -->
+                        <path
+                            d="
+                                M90 130
+                                C175 10 430 40 590 135
+                                S740 330 470 335
+                                S10 285 90 130Z
+                            "
+                            fill="url(#goldwash)"
+                        />
+
+
+                        <!-- Orange watercolor shape -->
+                        <path
+                            d="
+                                M390 65
+                                C580 -5 800 90 760 230
+                                S540 370 390 240Z
+                            "
+                            fill="url(#orangewash)"
+                        />
+
+                    </svg>
+                    <!-- Main page heading -->
+                    <h1>
+                        Life through my lens.
+                    </h1>
+                    <!-- Introduction -->
+                    <p>
+                        I like photographing the different lives a city
+                        holds: a fleeting expression, the color of the
+                        evening sky, or the atmosphere of a concert.
+                        Sometimes the smallest details are the ones
+                        I remember most.
+                    </p>
+
+                </header>
+
+
+                <!--PHOTOGRAPHY INTRODUCTION + GALLERY-->
+
+                <section class="cw-section">
+
+
+                    <!--
+                        PHOTOGRAPHY GALLERY
+
+                        This div starts empty because creative.js
+                        automatically creates the photo cards.
+
+                        The JavaScript inserts the photos here
+                        using the ID creative-photo-gallery.
+                    -->
+                    <div
+                        class="cw-gallery"
+                        id="creative-photo-gallery"
+                        aria-label="Photography gallery"
+                    >
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER-->
+    <footer class="palette-profile-footer now-footer">
+    <div><h2>KATE GAO</h2><p>Data Science × Psychology</p><p>Analytical × Creative</p><p>Curious about human behavior, research, and the stories behind data.</p></div>
+    <div><h2>CONNECT</h2><p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a> <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a> <a href="mailto:your-email@example.com">Email ↗</a></p></div>
+  </footer>
+
+</body>
+
+</html>

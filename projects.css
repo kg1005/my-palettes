@@ -1,0 +1,84 @@
+/* ===========================================
+   PURPLE PALETTE — PROJECTS PAGE ONLY
+   These rules are scoped to .palette-projects-body
+   to avoid changing Home or Profile.
+   =========================================== */
+.palette-projects-body { min-height:100vh; display:flex; flex-direction:column; background:#F8F5EE; }
+.palette-projects-body .projects-page { flex:1; width:min(1100px,86%); margin:0 auto; padding:0 0 50px; }
+/* The existing global section rule has min-height:85vh and large padding.
+   Override it ONLY for this page's gallery. */
+.palette-projects-body .projects-gallery { min-height:0; border:0; padding:0; }
+.projects-hero { position:relative; isolation:isolate; padding:75px 0 75px; }
+.projects-hero-wash { position:absolute; inset:0 auto auto -8%; width:100%; height:100%; z-index:-1; pointer-events:none; }
+.palette-projects-body .projects-hero h1 { font-family:Georgia,serif; font-size:clamp(48px,6vw,78px); font-weight:normal; line-height:1.13; text-align:left; margin:18px 0 22px; }
+.palette-projects-body .projects-hero-description { font-family:Georgia,serif; color:#766D66; max-width:650px; font-size:17px; line-height:1.75; margin:0; }
+.project-card:focus-visible { outline:2px solid #7471AE; outline-offset:3px; }
+.projects-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+/* Plain cards; watercolor stays up in the page header. */
+.project-card { display:flex; flex-direction:column; align-items:stretch; min-height:275px; text-align:left; background:#FCFAF5; border:1px solid #E0D9D0; border-radius:19px; padding:27px; box-shadow:0 5px 20px rgba(48,47,43,.025); color:inherit; cursor:pointer; transition:border-color .25s,transform .25s,box-shadow .25s; }
+.project-card:hover { border-color:#9A8BC1; transform:translateY(-3px); box-shadow:0 9px 24px rgba(116,113,174,.10); }
+.project-card-top { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.project-category { font:11px Georgia,serif; letter-spacing:1.5px; text-transform:uppercase; color:#92505D; }
+.project-arrow { font-size:25px; color:#7471AE; transition:transform .25s; }
+.project-card:hover .project-arrow { transform:translate(3px,-3px); }
+.project-card-title { font:normal clamp(22px,2.4vw,29px)/1.25 Georgia,serif; margin:23px 0 12px; transition:color .25s; }
+/* Hover changes the project title to purple, not the card background. */
+.project-card:hover .project-card-title { color:#7471AE; }
+.project-card-description { font:15px/1.7 Georgia,serif; color:#766D66; margin:0 0 24px; }
+.project-tags,.drawer-tags { display:flex; flex-wrap:wrap; gap:7px; }
+.project-tags { margin-top:auto; }
+.project-tag { display:inline-block; padding:5px 9px; border-radius:7px; background:#F0ECE7; color:#655F68; font:12px Georgia,serif; }
+/* Overlay dims the gallery; drawer slides in from the right. */
+.project-overlay[hidden] { display:none; }
+.project-overlay { position:fixed; inset:0; z-index:1000; }
+.project-backdrop { position:absolute; inset:0; width:100%; border:0; background:rgba(25,23,30,.56); cursor:pointer; }
+.project-drawer { position:absolute; right:0; top:0; bottom:0; width:min(610px,100%); box-sizing:border-box; padding:58px clamp(25px,4vw,58px) 65px; overflow-y:auto; background:#F8F5EE; box-shadow:-12px 0 45px rgba(0,0,0,.14); }
+.project-close { position:absolute; top:17px; right:22px; border:0; background:transparent; color:#514A46; font-size:35px; cursor:pointer; }
+.project-drawer h2 { font:normal clamp(31px,3vw,43px)/1.2 Georgia,serif; margin:14px 0 18px; }
+.drawer-tags { margin-bottom:23px; }
+.drawer-summary { font:17px/1.75 Georgia,serif; color:#514A46; border-left:3px solid #7471AE; padding-left:17px; }
+.drawer-source { display:inline-block; margin:18px 0 24px; padding:12px 17px; background:#EAE5F2; color:#62538F; border:1px solid #BDB0D5; border-radius:10px; text-decoration:none; font:15px Georgia,serif; }
+.drawer-source:hover { background:#DDD5EB; }
+.drawer-source-note { color:#857A83; font:italic 13px Georgia,serif; }
+.drawer-section { margin-top:34px; }
+.drawer-section h3 { font:normal 23px Georgia,serif; margin:0 0 12px; padding-left:13px; border-left:3px solid #7471AE; }
+.drawer-section p { font:16px/1.8 Georgia,serif; color:#766D66; margin:0; }
+/* This page keeps the existing footer design and gives it breathing room. */
+.palette-projects-body > .palette-profile-footer { margin-top:auto; }
+
+/*PROJECT DRAWER — METHODS & DELIVERABLES*/
+/*
+   A list is easier to scan than a long paragraph.
+   The left padding gives bullet markers room.
+*/
+.project-detail-list {
+    list-style-type: disc;
+    padding-left: 22px;
+    margin: 10px 0 24px;
+}
+
+/* Spacing and typography for each bullet */
+.project-detail-list li {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #766D66;
+    margin-bottom: 10px;
+    padding-left: 4px;
+}
+
+/* Lavender bullets match the Projects palette */
+.project-detail-list li::marker {
+    color: #7471AE;
+}
+
+
+
+@media (max-width:700px) {
+  .palette-projects-body .projects-page { width:86%; }
+  .projects-hero { padding:40px 0 45px; }
+  .projects-grid { grid-template-columns:1fr; }
+  .project-card { min-height:235px; padding:23px; }
+  .project-drawer { padding-top:64px; }
+}
+@media (prefers-reduced-motion:reduce) { .project-card,.project-arrow,.project-card-title { transition:none; } }

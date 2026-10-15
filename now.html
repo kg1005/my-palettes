@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Now | My Palettes</title>
+  <!-- Shared portfolio styles (navigation, typography, footer). -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Reuse the Projects card and drawer design. -->
+  <link rel="stylesheet" href="projects.css">
+  <!-- Only the Now page's sage styling and layout. -->
+  <link rel="stylesheet" href="now.css">
+  <script src="now.js" defer></script>
+</head>
+<body class="now-page">
+  <!-- Keep links relative so Home always opens index.html. -->
+  <header class="now-nav">
+    <a href="index.html" class="palette-back-link">← Back to the Palettes</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="projects.html">Projects</a>
+      <a href="photography.html">Creative Works</a>
+      <a href="now.html" aria-current="page">Now</a>
+    </nav>
+  </header>
+
+  <main class="now-main">
+    <!-- Sage wash appears ONLY behind the page title. -->
+    <section class="now-hero" aria-labelledby="now-title">
+      <svg class="now-watercolor" viewBox="0 0 900 350" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <radialGradient id="now-sage"><stop offset="0%" stop-color="#8CA894" stop-opacity=".43"/><stop offset="70%" stop-color="#B7C8B4" stop-opacity=".24"/><stop offset="100%" stop-color="#B7C8B4" stop-opacity="0"/></radialGradient>
+          <radialGradient id="now-light"><stop offset="0" stop-color="#C2CFB6" stop-opacity=".35"/><stop offset="1" stop-color="#C2CFB6" stop-opacity="0"/></radialGradient>
+          <filter id="projects-pigment-filter" x="-25%" y="-25%" width="150%" height="150%"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="3" seed="7" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="18"/><feGaussianBlur stdDeviation="5"/></filter>
+        </defs>
+        <ellipse cx="320" cy="135" rx="315" ry="158" fill="url(#now-sage)"/>
+        <ellipse cx="630" cy="195" rx="270" ry="142" fill="url(#now-light)"/>
+      </svg>
+      <p class="now-kicker">SAGE — CURRENTLY</p>
+      <h1 id="now-title">A little of what's happening now.</h1>
+      <p class="now-subtitle">What I'm learning, exploring, and creating at the moment.</p>
+      <p class="now-updated">Last updated: October 2026</p>
+    </section>
+
+    <section class="now-focus" aria-labelledby="focus-title">
+        <!-- Section heading -->
+        <p class="now-kicker">
+            01 / IN PROGRESS
+        </p>
+        <h2 id="focus-title">
+            Current focus.
+        </h2>
+        <!-- Two-column focus grid -->
+      <div class="now-focus-list">
+            <!-- 01: BRANDING -->
+            <article class="now-focus-item">
+                <span class="now-focus-label">
+                    BRANDING
+                </span>
+                <div>
+                    <h3>Luxury retail &amp; brand strategy</h3>
+                    <p>
+                        Exploring how luxury brands communicate
+                        identity, experience, and value through the
+                        <a
+                            href="https://www.insidelvmh.com/certificate"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            INSIDE LVMH Certificate ↗
+                        </a>.
+                    </p>
+                </div>
+            </article>
+
+            <!-- 02: CODING -->
+            <article class="now-focus-item">
+
+                <span class="now-focus-label">
+                    CODING
+                </span>
+                <div>
+                    <h3>Building technical fluency</h3>
+                    <p>
+                        Developing HTML, CSS, and JavaScript through
+                        the ongoing design of this portfolio, while
+                        strengthening Python through data-focused
+                        projects such as Retail Promotion Intelligence.
+                    </p>
+                </div>
+            </article>
+            <!-- 03: AI -->
+            <article class="now-focus-item">
+                <span class="now-focus-label">
+                    AI
+                </span>
+                <div>
+                    <h3>Learning how AI systems are evaluated</h3>
+                    <p>
+                        Exploring audio, visual, and text evaluation
+                        through Handshake AI opportunities, including
+                        Project Hedgehog and Project Octahedron —
+                        Comparisons.
+                    </p>
+                </div>
+            </article>
+            <!-- 04: BACKEND -->
+            <article class="now-focus-item">
+                <span class="now-focus-label">
+                    BACKEND
+                </span>
+                <div>
+                    <h3>Developing SQL skills</h3>
+                    <p>
+                        Developing SQL through Retail Promotion
+                        Intelligence: learning to query retail
+                        transactions, summarize purchasing patterns,
+                        and explore customer segments alongside Python.
+                    </p>
+                </div>
+            </article>
+            <!-- 05: CREATIVE -->
+            <article class="now-focus-item">
+                <span class="now-focus-label">
+                    CREATIVE
+                </span>
+                <div>
+                    <h3>Observing the city through photography</h3>
+                    <p>
+                        Capturing the different lives, details, and
+                        changing scenery of New York City.
+                        <a href="photography.html">
+                            Explore my creative work ↗
+                        </a>
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="now-work" aria-labelledby="work-title">
+      <p class="now-kicker">02 / ON MY DESK</p>
+      <h2 id="work-title">Current projects.</h2>
+      <p class="now-work-intro">Two research-driven analytics projects, plus the website I’m continually designing and improving.</p>
+      <!-- JavaScript creates the two analytics cards and one portfolio website card.
+           Clicking any card opens the same details drawer. -->
+      <div id="now-projects-grid" class="projects-grid"></div>
+    </section>
+  </main>
+
+  <!-- Same project drawer pattern; content is populated from now.js. -->
+  <div id="now-overlay" class="project-overlay" hidden>
+    <button type="button" id="now-backdrop" class="project-backdrop" aria-label="Close project details"></button>
+    <aside id="now-drawer" class="project-drawer" role="dialog" aria-modal="true" aria-labelledby="now-drawer-title" tabindex="-1">
+      <button type="button" id="now-close" class="project-close" aria-label="Close project details">×</button>
+      <p id="now-drawer-category" class="project-category"></p>
+      <h2 id="now-drawer-title"></h2>
+      <p id="now-drawer-summary"></p>
+      <div id="now-drawer-tags" class="project-tags"></div>
+      <div class="now-drawer-section"><h3>Source code</h3><a id="now-drawer-source" href="#" target="_blank" rel="noopener noreferrer" hidden>View on GitHub ↗</a><p id="now-drawer-source-note">GitHub repository link coming soon.</p></div>
+      <div class="now-drawer-section"><h3 id="now-question-heading">Research question</h3><p id="now-drawer-question"></p></div>
+      <div class="now-drawer-section"><h3 id="now-method-heading">Methods &amp; technical approach</h3><div id="now-drawer-method"></div></div>
+      <div class="now-drawer-section"><h3 id="now-results-heading">Planned deliverables</h3><div id="now-drawer-results"></div></div>
+    </aside>
+  </div>
+
+  <!-- Shared footer styling. Replace contact placeholders with your real URLs. -->
+  <footer class="palette-profile-footer now-footer">
+    <div><h2>KATE GAO</h2><p>Data Science × Psychology</p><p>Analytical × Creative</p><p>Curious about human behavior, research, and the stories behind data.</p></div>
+    <div><h2>CONNECT</h2><p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a> <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a> <a href="mailto:your-email@example.com">Email ↗</a></p></div>
+  </footer>
+</body>
+</html>

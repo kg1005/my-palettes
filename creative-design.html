@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- PAGE SETTINGS-->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Design & Art | My Palettes</title>
+
+    <!-- Shared portfolio styling -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Creative Works styling -->
+    <link rel="stylesheet" href="creative.css">
+
+    <!-- Shared Creative Works interactions -->
+    <script src="creative.js" defer></script>
+
+</head>
+
+
+<body class="creative-site">
+
+    <!-- MAIN NAVIGATION-->
+
+    <nav class="cw-topnav" aria-label="Main navigation">
+
+        <a href="index.html">
+            ← MY PALETTES / HOME
+        </a>
+
+        <div class="cw-toplinks">
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="photography.html">
+                Creative Works
+            </a>
+
+            <a href="now.html">
+                Now
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!--  CREATIVE WORKS LAYOUT -->
+
+    <main>
+
+        <div class="cw-page">
+
+            <!--LEFT-SIDE CHAPTER NAVIGATION -->
+
+            <aside
+                class="cw-tabs"
+                aria-label="Creative chapters"
+            >
+
+                <p class="cw-tabs-title">
+                    CREATIVE CHAPTERS
+                </p>
+
+                <a
+                    class="cw-tab"
+                    href="photography.html"
+                >
+                    Overview
+                </a>
+
+                <a
+                    class="cw-tab"
+                    href="creative-design.html"
+                    aria-current="page"
+                >
+                    Design & Art
+                </a>
+
+                <a
+                    class="cw-tab"
+                    href="creative-photography.html"
+                >
+                    Photography
+                </a>
+
+                <a
+                    class="cw-tab"
+                    href="creative-colors.html"
+                >
+                    Behind the Colors
+                </a>
+
+            </aside>
+
+
+            <!--MAIN PAGE CONTENT -->
+
+            <div class="cw-main">
+
+                <!--PAGE HEADING + WATERCOLOR -->
+
+                <header class="cw-heading">
+
+                    <!-- Amber watercolor background -->
+                    <svg
+                        class="cw-wash"
+                        viewBox="0 0 800 380"
+                        aria-hidden="true"
+                    >
+
+                        <defs>
+
+                            <!-- Golden watercolor gradient -->
+                            <radialGradient id="design-goldwash">
+
+                                <stop
+                                    stop-color="#DBB16A"
+                                    stop-opacity=".52"
+                                />
+
+                                <stop
+                                    offset="1"
+                                    stop-color="#DBB16A"
+                                    stop-opacity="0"
+                                />
+
+                            </radialGradient>
+
+
+                            <!-- Peach watercolor gradient -->
+                            <radialGradient id="design-orangewash">
+
+                                <stop
+                                    stop-color="#E6A47A"
+                                    stop-opacity=".35"
+                                />
+
+                                <stop
+                                    offset="1"
+                                    stop-color="#E6A47A"
+                                    stop-opacity="0"
+                                />
+
+                            </radialGradient>
+
+                        </defs>
+
+
+                        <!-- Golden watercolor shape -->
+                        <path
+                            d="
+                                M90 130
+                                C175 10 430 40 590 135
+                                S740 330 470 335
+                                S10 285 90 130Z
+                            "
+                            fill="url(#design-goldwash)"
+                        />
+
+
+                        <!-- Peach watercolor shape -->
+                        <path
+                            d="
+                                M390 65
+                                C580 -5 800 90 760 230
+                                S540 370 390 240Z
+                            "
+                            fill="url(#design-orangewash)"
+                        />
+
+                    </svg>
+                  
+                    <!-- Page title -->
+                    <h1>
+                        Design & Art
+                    </h1>
+
+
+                    <!-- Page introduction -->
+                    <p>
+                        Digital design gave me another way to
+                        explore ideas, cultures, and perspectives.
+                        Here are some of the pieces I've worked on.
+                    </p>
+
+                </header>
+
+
+
+                <!--EDITORIAL DESIGN PORTFOLIO-->
+
+                <section
+                    class="cw-section"
+                    aria-labelledby="design-work-heading"
+                >
+
+                    <h2
+                        id="design-work-heading"
+                        class="design-section-title"
+                    >
+                        Works
+                    </h2>
+
+                    <div class="design-project-grid">
+
+
+                        <!--PROJECT 1: TAMIL TIES -->
+
+                        <article class="design-project">
+
+                            <!--
+                                The image is the actual two-page
+                                editorial spread from pages 32–33.
+
+                                Save your image at:
+                                images/creative/tamil-ties-spread.jpg
+                            -->
+
+                            <a
+                                class="design-project-image-link"
+                                href="https://www.nyubaedeker.org/print-issues/blog-post-title-one-sc9ct-wbjzd-s6zsx-yj7yd-twnm2-dresp-egly9"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="View the Spring 2025 NYC issue containing Tamil Ties"
+                            >
+
+                                <img
+                                    src="images/creative/tamil-ties-spread.jpg"
+                                    alt="Tamil Ties two-page editorial spread from Baedeker Spring 2025 NYC, pages 32–33"
+                                    class="design-project-image"
+                                    loading="lazy"
+                                >
+
+                            </a>
+
+
+                            <!-- Project category -->
+                            <p class="design-project-category">
+                                EDITORIAL DESIGN / SPRING 2025
+                            </p>
+
+
+                            <!-- Project title -->
+                            <h3>
+                                Tamil Ties
+                            </h3>
+
+
+                            <!-- Publication details -->
+                            <p class="design-project-meta">
+                                Baedeker Magazine · NYC Edition
+                                <br>
+                                Pages 32–33
+                            </p>
+
+
+                            <!-- Project description -->
+                            <p class="design-project-description">
+                                A two-page editorial design featured in
+                                Baedeker Magazine's Spring 2025 NYC issue,
+                                bringing together illustration,
+                                typography, and written storytelling.
+                            </p>
+
+
+                            <!-- Link to the complete publication -->
+                            <a
+                                class="design-issue-link"
+                                href="https://www.nyubaedeker.org/print-issues/blog-post-title-one-sc9ct-wbjzd-s6zsx-yj7yd-twnm2-dresp-egly9"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Full Spring 2025 NYC Issue ↗
+                            </a>
+
+                        </article>
+
+
+
+                        <!--ROJECT 2: SPRING 2026 -->
+
+                        <article class="design-project">
+
+                            <!--
+                                Placeholder for the upcoming issue.
+
+                                Replace with an image
+                                once the design is available.
+                            -->
+
+                            <div class="design-project-placeholder">
+
+                                <span>
+                                    SPRING 2026
+                                </span>
+
+                                <p>
+                                    Coming Soon
+                                </p>
+
+                            </div>
+
+
+                            <!-- Project category -->
+                            <p class="design-project-category">
+                                EDITORIAL DESIGN / SPRING 2026
+                            </p>
+
+
+                            <!-- Project title -->
+                            <h3>
+                                More pages in progress.
+                            </h3>
+
+
+                            <!-- Publication details -->
+                            <p class="design-project-meta">
+                                Baedeker Magazine
+                                <br>
+                                Upcoming Issue
+                            </p>
+
+
+                            <!-- Project description -->
+                            <p class="design-project-description">
+                                Another chapter of editorial design.
+                                This piece will be added once the
+                                issue is available.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER-->
+    <footer class="palette-profile-footer now-footer">
+    <div><h2>KATE GAO</h2><p>Data Science × Psychology</p><p>Analytical × Creative</p><p>Curious about human behavior, research, and the stories behind data.</p></div>
+    <div><h2>CONNECT</h2><p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a> <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a> <a href="mailto:your-email@example.com">Email ↗</a></p></div>
+  </footer>
+
+</body>
+
+</html>
