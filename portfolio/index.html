@@ -1,0 +1,346 @@
+<!DOCTYPE html> <!-- tells browser to use modern HTML -->
+<html lang="en"> <!-- speicifies english as the language -->
+<head> <!-- info abt the website -->
+    <link rel = "stylesheet" href = "style.css"> <!-- link to the CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KG's Personal Portolio</title>
+</head><!-- / closes the section -->
+
+<body><!-- what vistors will actually see -->
+    <nav> <!-- navigation bar-> tells these links are used for navigation -->
+        <a href = "index.html">Home</a>
+        <a href = "profile.html">Profile</a> <!-- <a> = clickable link; href = hyperlink reference-->
+        <a href = "projects.html">Projects</a>
+        <a href = "photography.html">Creative</a>
+        <a href = "now.html">Now</a>
+        
+    </nav>
+    <h1> MY COLOR PALETTES</h1> <!-- h1= main heading -->
+    <p>Welcome to Kate Gao's portfolio!</p> <!-- p = paragraph -->
+    <div class = "skyline-container"> <!-- div = container for content; class = " " identifies a specific section -->
+        <svg class="skyline-image"
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 500 1050"
+         role="img"
+         aria-label="An illustrated NYC landscape with links to Profile, Projects, Creative works, and Current Developments.">
+
+        <!-- watercolor colors -->
+        <defs>
+            <radialGradient id="rose-watercolor">
+                <stop offset="0%" stop-color="#C66B79" stop-opacity="0.45"/>
+                <stop offset="65%" stop-color="#E7A6AE" stop-opacity="0.22"/>
+                <stop offset="100%" stop-color="#E7A6AE" stop-opacity="0"/>
+            </radialGradient>
+
+            <radialGradient id="amber-watercolor">
+                <stop offset="0%" stop-color="#D8A14B" stop-opacity="0.45"/>
+                <stop offset="65%" stop-color="#F0D19A" stop-opacity="0.22"/>
+                <stop offset="100%" stop-color="#F0D19A" stop-opacity="0"/>
+            </radialGradient>
+
+            <radialGradient id="purple-watercolor">
+                <stop offset="0%" stop-color="#8B83BC" stop-opacity="0.45"/>
+                <stop offset="65%" stop-color="#C3BCE0" stop-opacity="0.22"/>
+                <stop offset="100%" stop-color="#C3BCE0" stop-opacity="0"/>
+            </radialGradient>
+
+            <radialGradient id="sage-watercolor">
+                <stop offset="0%" stop-color="#849B80" stop-opacity=".52"/>
+                <stop offset="65%" stop-color="#B7C7AC" stop-opacity=".30"/>
+                <stop offset="100%" stop-color="#B7C7AC" stop-opacity="0"/>
+            </radialGradient>
+            
+            <!-- watercolor texture -->
+            <filter id="watercolor-texture"
+                x="-30%" y="-30%"
+                width="160%" height="160%">
+            
+            <!-- cloud-like noise -->
+            <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.025"
+                numOctaves="3"
+                seed="4"
+                result="noise"
+            />
+            <!-- distorts edges -->
+            <feDisplacementMap
+                in="SourceGraphic"
+                in2="noise"
+                scale="32"
+                xChannelSelector="R"
+                yChannelSelector="G"
+                result="distorted"
+            />
+
+            <feGaussianBlur
+                in="distorted"
+                stdDeviation="4"
+            />
+
+            </filter>
+        </defs>
+
+        <!-- WATERCOLOR: hidden until hover -->
+        <g class="watercolor-layer">
+            <!--  watercolor slash for each section-->
+            <g class="watercolor profile-color"
+                 filter="url(#watercolor-texture)">
+                 <!--  drawing custom shape; d = attribute, M = starting point, C = curved, z = closes shape-->
+                <path 
+                    d="
+                        M 255 210
+                        C 225 175, 245 135, 290 140  
+                        C 320 105, 375 130, 390 155
+                        C 445 150, 480 190, 450 225
+                        C 465 265, 420 290, 380 270
+                        C 340 305, 290 280, 275 250
+                        C 240 245, 235 220, 255 205
+                        Z
+                    "
+                    fill="url(#rose-watercolor)"
+                /> <!-- C = draws smooth curves w. control points -->
+                <ellipse
+                    cx="400"
+                    cy="195"
+                    rx="150"
+                    ry="65"
+                    fill="#C66B79"
+                    opacity="0.12"
+                />
+                </g>
+
+            <g class="watercolor projects-color"
+                filter="url(#watercolor-texture)">
+
+                    <path
+                        d="
+                            M 250 420
+                            C 225 385, 260 345, 310 355
+                            C 345 325, 400 345, 420 375
+                            C 465 370, 495 410, 465 445
+                            C 480 485, 425 510, 390 485
+                            C 350 515, 300 490, 285 465
+                            C 250 475, 230 445, 250 420
+                            Z
+                        "
+                        fill="url(#purple-watercolor)"
+                    />
+
+                    <ellipse
+                        cx="390"
+                        cy="415"
+                        rx="150"
+                        ry="70"
+                        fill="#8B83BC"
+                        opacity="0.12"
+                    />
+
+                </g>
+
+            <g class="watercolor creative-color"
+                filter="url(#watercolor-texture)">
+                    <path
+                        d="
+                            M 245 640
+                            C 225 605, 260 565, 310 575
+                            C 350 540, 400 565, 420 595
+                            C 475 590, 495 635, 465 665
+                            C 480 705, 430 730, 390 705
+                            C 350 735, 295 710, 280 685
+                            C 245 690, 225 660, 245 640
+                            Z
+                        "
+                        fill="url(#amber-watercolor)"
+                    />
+
+                    <ellipse
+                        cx="355"
+                        cy="635"
+                        rx="150"
+                        ry="75"
+                        fill="#D8A14B"
+                        opacity="0.12"
+                    />
+
+                </g>
+            
+           
+            <g class="watercolor now-color"
+                filter="url(#watercolor-texture)"
+                transform="translate(0 -50)">
+
+                    <path
+                        d="
+                            M 100 905
+                            C 90 870, 125 830, 175 840
+                            C 215 805, 265 830, 285 860
+                            C 340 855, 360 900, 330 930
+                            C 345 970, 295 995, 255 970
+                            C 215 1000, 160 975, 145 950
+                            C 110 955, 90 925, 110 905
+                            Z
+                        "
+                        fill="url(#sage-watercolor)"
+                    />
+
+                    <ellipse
+                        cx="320"
+                        cy="900"
+                        rx="180"
+                        ry="75"
+                        fill="#849B80"
+                        opacity="0.12"
+                />
+
+            </g>
+
+
+        </g>
+        
+        <g transform="translate(400 0) scale(1.6 1) rotate(90)"
+        fill="none"
+        stroke="#302F2B"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+
+            <!--  SKYLINE OUTLINE -->
+            <path d="
+                M 0 350
+                L 40 350 L 40 320
+                L 70 320 L 70 260
+                L 85 245 L 100 260
+                L 100 320 L 130 320
+                L 130 285 L 160 285
+                L 160 330 L 185 330
+                L 185 220 L 205 210
+                L 215 190 L 225 210
+                L 245 220 L 245 330
+                L 270 330 L 270 275
+                L 300 275 L 300 315
+                L 330 315 L 330 250
+                L 360 250 L 360 330
+                L 390 330 L 390 205
+                L 405 190 L 415 165
+                L 425 190 L 440 205
+                L 440 330 L 465 330
+                L 465 280 L 495 280
+                L 495 335 L 520 335
+                L 520 235 L 540 235
+                L 540 330 L 570 330
+                L 570 350 L 600 350
+                L 615 350
+                L 615 325
+                L 635 325
+                L 635 295
+                L 650 295
+                L 650 270
+                L 665 255
+                L 680 270
+                L 680 315
+                L 700 315
+                L 700 285
+                L 720 285
+                L 720 305
+                L 740 305
+                L 740 320
+                L 770 320
+                L 790 320
+                L 790 285
+                L 815 285
+                L 815 245
+                L 835 235
+                L 850 210
+                L 865 235
+                L 885 245
+                L 885 320
+                L 910 320
+                L 910 275
+                L 935 275
+                L 935 330
+                L 960 330
+                L 960 350
+                L 990 350
+            "/>
+
+            <!-- ORIGINAL BUILDING SPIRES -->
+            <path d="M215 190 L215 90"/>
+            <path d="M415 165 L415 110"/>
+            <path d="M850 210 L850 125"/>
+
+        </g>
+
+
+        <!--  SECTIONS -->
+        <g class="skyline-labels">
+
+            <a href="profile.html"
+                class="landmark-link profile-link">
+                <text x="335" y="220">ROSE - Profile</text>
+            </a>
+
+            <a href="projects.html"
+                class="landmark-link projects-link">
+                <text x="310" y="420">LAVENDER - Projects</text>
+            </a>
+
+            <a href="photography.html"
+                class="landmark-link creative-link">
+                <text x="240" y="650"> AMBER - Creative Works</text>
+            </a>
+            <a href="now.html"
+                class="landmark-link now-link">
+                <text x="245" y="835"> 
+                    <tspan x="245" dy="0">SAGE - Current</tspan>
+                    <tspan x="245" dy="38">Developments</tspan>
+                </text>
+
+            </a>
+
+        </g>
+    </svg>
+</div>
+
+<!-- PERSONAL FOOTER -->
+<footer class="palette-profile-footer">
+
+    <div class="footer-about">
+        <h2>KATE GAO</h2>
+
+        <p>Data Science × Psychology</p>
+        <p>Analytical × Creative</p>
+
+        <p class="footer-description">
+            Curious about human behavior, research,
+            and the stories behind data.
+        </p>
+    </div>
+
+    <div class="footer-connect">
+        <h2>CONNECT</h2>
+
+        <div class="footer-links">
+            <a href="https://github.com/kg1005"
+               target="_blank" rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+
+            <a href="https://www.linkedin.com/in/kate-gao-629022281"
+               target="_blank" rel="noopener noreferrer">
+                LinkedIn ↗
+            </a>
+
+            <a href="mailto:kategao1005@gmail.com">
+                Email ↗
+            </a>
+        </div>
+    </div>
+
+</footer>
+
+
+
+</body>
+</html><!-- ends the HTML document -->

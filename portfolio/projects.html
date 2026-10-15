@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | My Palettes</title>
+  <!-- Existing site styles remain unchanged. This page adds its own scoped styles. -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+  <script src="projects.js" defer></script>
+</head>
+<body class="palette-projects-body">
+  <header class="palette-page-header">
+    <a href="index.html" class="palette-back-link">← Back to the Palettes</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="projects.html">Projects</a>
+      <a href="photography.html">Creative Works</a>
+      <a href="now.html" aria-current="page">Now</a>
+    </nav>
+  </header>
+
+
+  <main class="projects-page" id="main-content">
+    <!-- The watercolor lives ONLY behind the page title. -->
+    <header class="projects-hero">
+      <svg class="projects-hero-wash" viewBox="0 0 900 320" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <defs>
+          <radialGradient id="projects-purple-pigment"><stop offset="0%" stop-color="#7471AE" stop-opacity=".40"/><stop offset="70%" stop-color="#A59ACB" stop-opacity=".22"/><stop offset="100%" stop-color="#A59ACB" stop-opacity="0"/></radialGradient>
+          <filter id="projects-pigment-filter" x="-25%" y="-25%" width="150%" height="150%"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="3" seed="7" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="18"/><feGaussianBlur stdDeviation="5"/></filter>
+        </defs>
+        <g filter="url(#projects-pigment-filter)"><path d="M120 70 C250 -10 530 10 610 110 C710 220 540 300 300 275 C100 275 30 170 120 70 Z" fill="url(#projects-purple-pigment)"/><path d="M510 105 C650 30 850 85 880 200 C890 290 700 335 560 275 C445 220 420 150 510 105 Z" fill="url(#projects-rose-pigment)"/></g>
+      </svg>
+      <p class="palette-kicker">PURPLE — PROJECTS</p>
+      <h1>Questions worth<br>exploring.</h1>
+      <p class="projects-hero-description">A collection of independent explorations in data, behavior, and research. Select a project to see the question, process, and tools behind it.</p>
+    </header>
+
+    <!-- Project cards appear directly below the watercolor heading. -->
+    <section class="projects-gallery" aria-label="Project gallery">
+      <!-- JavaScript builds the cards from a single data array; edit project content there. -->
+      <div class="projects-grid" id="projects-grid"></div>
+    </section>
+  </main>
+
+  <!-- Right-side project details drawer. The backdrop closes it on click. 
+        over -> entire layer covering screen; backdrop -> darkened areas; drawer -> actual panel -->
+  <div class="project-overlay" id="project-overlay" hidden>
+    <button class="project-backdrop" id="project-backdrop" type="button" aria-label="Close project details"></button>
+    <aside class="project-drawer" id="project-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabindex="-1">
+      <button class="project-close" id="project-close" type="button" aria-label="Close project details">×</button>
+      <p class="palette-kicker" id="drawer-category">PROJECT DETAILS</p>
+      <h2 id="drawer-title"></h2>
+      <div class="drawer-tags" id="drawer-tags"></div>
+      <p class="drawer-summary" id="drawer-summary"></p>
+      <a class="drawer-source" id="drawer-source" target="_blank" rel="noopener noreferrer" hidden>↗ View source code on GitHub</a>
+      <p class="drawer-source-note" id="drawer-source-note">GitHub repository link coming soon.</p>
+      <div class="drawer-section"><h3>The question</h3><p id="drawer-question"></p></div>
+      <div class="drawer-section"><h3>Approach &amp; methods</h3><p id="drawer-method"></p></div>
+      <div class="drawer-section"><h3>Results &amp; next steps</h3><p id="drawer-results"></p></div>
+    </aside>
+  </div>
+
+  <!-- Same shared footer markup as your Profile page. -->
+  <footer class="palette-profile-footer">
+    <div class="footer-about"><h2>KATE GAO</h2><p>Data Science × Psychology</p><p>Analytical × Creative</p><p class="footer-description">Curious about human behavior, research, and the stories behind data.</p></div>
+    <div class="footer-connect"><h2>CONNECT</h2><div class="footer-links"><a href="https://github.com/kg1005" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/kate-gao-629022281" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:kategao1005@gmail.com">Email ↗</a></div></div>
+  </footer>
+</body>
+</html>
