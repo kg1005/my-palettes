@@ -1,11 +1,15 @@
-/* PHOTOGRAPHY GALLERY DATA
-   Replace the placeholder path with an actual photo file after you add it.
-   Leave unknown metadata blank instead of guessing dates or locations. */
+/* PHOTOGRAPHY GALLERY DATA*/
 const photos = [
-  {src:'',title:'City in motion',date:'',place:'New York City',event:''},
-  {src:'',title:'A quieter corner',date:'',place:'',event:''},
-  {src:'',title:'After the lights',date:'',place:'',event:'Concert / event (if applicable)'},
-  {src:'',title:'Everyday details',date:'',place:'',event:''}
+  {src:'traffic.jpg',title:'Night Road',date:'07/11/2026',place:'Westhampton, NY'}, 
+  {src:'nycbridge.jpg',title:'Manhattan Bridge',date:'07/05/2026',place:'NYC'},
+  {src:'nightview.jpg',title:'City At Sunset',date:'11/29/2025',place:'Lake Lugano, Switzerland'},
+  {src:'fog.jpg',title:'Foggy Morning',date:'11/16/2025',place:'Paris'},
+  {src:'beach.jpg',title:'Beach Volleyball',date:'10/31/2025',place:'Barcelona'},
+  {src:'house.jpg',title:'Within Nature',date:'10/31/2025',place:'Park Guell, Barcelona'},
+  {src:'bridge.jpg',title:'Bridgerton Bridge',date:'10/17/2025',place:'Pior Park, UK'},
+  {src:'boat.jpg',title:'Boat',date:'10/11/2025',place:'Venice'},
+  {src:'shop.jpg',title:'Little Shop',date:'09/27/2025',place:'UK'},
+  {src:'cats.jpg',title:'Cats',date:'09/12/2025',place:'London, UK'}
 ];
 const gallery=document.getElementById('creative-photo-gallery');
 if(gallery){
