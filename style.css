@@ -810,9 +810,6 @@ body > main {
     gap: 65px;
     align-items: start;
 }
-.foundation-content {
-    text-align: left;
-}
 .foundation-content .palette-intro {
     font-size: 23px;
     line-height: 1.55;
@@ -826,7 +823,7 @@ body > main {
 /* Organic portrait — no rectangular card */
 .foundation-portrait {
     margin: 20px 0 0;
-    transform: translateY(-25px);
+    transform: none;
 }
 .foundation-portrait img {
     width: 100%;
@@ -1105,23 +1102,6 @@ body > main {
     outline-offset: 4px;
 }
 
-.foundation-content .profile-resume-link {
-    display: block;
-    position: relative;
-    margin-top: 22px;
-    margin-bottom: 0;
-    padding: 0;
-    min-height: 0;
-    width: fit-content;
-}
-
-.foundation-content .resume-download {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding: 12px 24px;
-}
 /* PROFILE INTRO + RESUME ALIGNMENT */
 
 .palette-foundation .foundation-content {
