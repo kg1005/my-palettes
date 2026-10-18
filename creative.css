@@ -755,6 +755,39 @@ body.creative-site .cw-heading {
     color: #82502c;
 }
 
+/* COLOR PSYCHOLOGY RESEARCH NOTE */
+
+.color-research-note {
+    min-height: 0;
+    max-width: 780px;
+    margin: 50px auto 70px;
+    padding: 30px 0;
+    border-top: 1px solid #DDD7CC;
+}
+
+.color-research-note h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.color-research-note p {
+    max-width: 720px;
+    line-height: 1.8;
+}
+
+.color-citation {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #766D66;
+}
+
+.color-citation a {
+    color: #92505D;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 650px) {
