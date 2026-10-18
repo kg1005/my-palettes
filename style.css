@@ -1104,6 +1104,25 @@ body > main {
     outline: 2px solid #92505D;
     outline-offset: 4px;
 }
+* PROFILE — RESUME BUTTON BELOW INTRODUCTION */
+
+.foundation-content .profile-resume-link {
+    display: block;
+    position: relative;
+    margin-top: 22px;
+    margin-bottom: 0;
+    padding: 0;
+    min-height: 0;
+    width: fit-content;
+}
+
+.foundation-content .resume-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px 24px;
+}
 
 /* MOBILE: Applies to screens 700px wide or smaller */
 @media (max-width: 700px) {
