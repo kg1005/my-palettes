@@ -200,6 +200,46 @@
     text-underline-offset: 4px;
 }
 
+/* NOW PAGE — CURRENTLY LEARNING */
+
+.now-learning-item {
+    margin: 24px 0;
+    padding: 20px 0;
+    border-top: 1px solid rgba(100, 110, 90, 0.25);
+}
+
+.now-learning-status {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #78866B;
+}
+
+.now-learning-item h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.now-learning-item p {
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+.now-learning-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #65775B;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.now-learning-link:hover {
+    color: #3F5239;
+}
+
 @media(max-width:700px) { 
    /* single columns */
    .now-page .now-focus-list {
